@@ -1,0 +1,9 @@
+/*Overall Styling for the body
+easy readible text and size */
+body {
+    font-family: 'Humanst521 Lt BT';
+    font-size: 18px;
+}
+/*Navigation Bar Styling*/
+.TopNav{
+    font-family: BeteNoirA;}

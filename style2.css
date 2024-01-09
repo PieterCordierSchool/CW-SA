@@ -1,0 +1,814 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Humanst521 Lt BT';
+  font-size: 18px;
+}
+
+
+.navbar {
+  width: 300px;
+  height: 50%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 20% 0 0 60%; */
+  transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+  font-family: BeteNoirA;
+}
+
+.change {
+  right: 0;
+}
+
+.hamburger-menu {
+  width: 35px;
+  height: 30px;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: BeteNoirA;
+}
+
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.8s;
+}
+
+.change .line-1 {
+  transform: rotateZ(-405deg) translate(-8px, 6px);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.nav-list {
+  text-align: right;
+}
+
+.nav-item {
+  list-style: none;
+  margin: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 22px;
+  color: #eee;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 3px 0;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.nav-link::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.nav-link::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+#instagram {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  padding-top: 50px;
+}
+#instagram:hover {
+  transform: scale(1.5);
+}
+
+#twitter {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  padding-top: 50px;
+}
+#twitter:hover {
+  transform: scale(1.5);
+}
+
+#facebook {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  padding-top: 50px;
+
+}
+#facebook:hover {
+  transform: scale(1.5);
+}
+
+#rhino {
+  height: 100px;
+  width: 100px;
+  margin: -5px;
+  top: 0;
+  left: 50%;
+  padding-left: 300px;
+  padding-right: 300px;
+  
+}
+
+#rhinopic {
+  height: 100px;
+  width: 100px;
+  margin-top: 1px;
+  translate: 1px 20px;
+}
+
+#rhinontop{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+body a {
+  display: flex;
+  float: left;
+}
+
+.navbarMain {
+  background-color: black;
+  color: white;
+}
+.nav-link a{
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: gray;
+}
+
+/* show now styling start */
+
+/* Shop Item Text */
+#shopItems .shop-item h2 {
+  font-size: 20px;
+}
+
+#shopItems .shop-item p {
+  font-size: 18px;
+
+}
+
+.productImg {
+  width: 360px;
+  height: 400px;
+}
+
+/* Trolley */
+.trolley {
+  width: 50px;
+  position: relative;
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.details {
+  height: 100px;
+}
+
+.cart {
+  position: fixed;
+  top: 50px;
+  left: 40%;
+  z-index: 2;
+  min-height: 200px;
+  max-height: 90vh;
+  width: 600px;
+  border-radius: 10px;
+  color: #333333;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 20px rgb(110, 108, 108);
+  display: none;
+  overflow: hidden;
+
+}
+
+.cart .top {
+  float: right;
+}
+
+.cart .top span {
+  padding: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  
+}
+
+.cart .top span:hover {
+  transform: scale(1.2);
+}
+
+.cart .items {
+  min-height: 100px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.cart .items ul {
+  list-style: none;
+}
+
+.cart .items ul li {
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.cart .items ul li input {
+  width: 30px;
+}
+
+/* Cart Buttom */
+.btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: black;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.CheckOutImage {
+  background-image: url("Assests Exam/Thanks.jpg");
+  background-color: #cccccc;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.CheckOutImage h1 {
+  text-align: center;
+  color: aliceblue;
+}
+
+#ship {
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 50px;
+}
+
+#email {
+  width: auto;
+}
+
+
+
+
+
+footer{
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  height: auto;
+  width: 100%;
+  padding-top: 40px;
+  color: #fff;
+  height: 150px;
+  overflow: hidden;
+}
+
+.footerlinks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-right: 30px;
+  
+}
+
+.footer-img{
+  float: right;
+  width: 90px;
+  height: auto; 
+  position: relative;
+  left: -50px;
+  top: 500;
+}
+
+/* footer modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#shopItems {
+  height: 130vh;
+}
+
+#shopItems ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+/* Shop Item Cards */
+
+#shopItems .shop-item {
+  max-width: 400px;
+  height: 50vh;
+  text-align: center;
+  padding: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  margin: 30px 10px;
+
+}
+
+/* Shop Item Text */
+#shopItems .shop-item h2 {
+  font-size: 20px;
+}
+
+#shopItems .shop-item p {
+  font-size: 18px;
+
+}
+
+.productImg {
+  width: 360px;
+  height: 400px;
+}
+
+/* Trolley */
+.trolley {
+  width: 50px;
+  position: relative;
+  background-color: grey;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.details {
+  height: 100px;
+}
+
+.cart {
+  position: fixed;
+  top: 50px;
+  left: 40%;
+  z-index: 2;
+  min-height: 200px;
+  max-height: 90vh;
+  width: 600px;
+  border-radius: 10px;
+  color: #333333;
+  background-color: #ffffff;
+  box-shadow: 10px 10px 20px rgb(110, 108, 108);
+  display: none;
+  overflow: scroll;
+}
+
+.cart .top {
+  float: right;
+}
+
+.cart .top span {
+  padding: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.cart .top span:hover {
+  transform: scale(1.2);
+}
+
+.cart .items {
+  min-height: 100px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.cart .items ul {
+  list-style: none;
+}
+
+.cart .items ul li {
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.cart .items ul li input {
+  width: 30px;
+}
+
+/* Cart Buttom */
+.btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: black;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.CheckOutImage {
+  background-image: url("Assests Exam/Thanks.jpg");
+  background-color: #cccccc;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.CheckOutImage h1 {
+  text-align: center;
+  color: aliceblue;
+}
+
+
+.form-control {
+  margin-right: 25%;
+  margin-left: 25%;
+  background-color: #eee;
+  border-radius: 15px;
+  width: 50%;
+  height: auto;
+  padding: 40px;
+}
+
+.number {
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 20px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.form-control .formInput {
+  width: 100%;
+  height: 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(221, 221, 221);
+  padding: 5px;
+
+}
+
+.form-control input:invalid {
+  border: 1px solid red;
+}
+
+.form-control input:valid {
+  border: 1px solid green;
+}
+
+.form-control h1 {
+  margin: 10px 0;
+}
+
+.form-control select {
+  width: 100%;
+  height: 30px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(221, 221, 221);
+
+
+
+
+  padding: 5px;
+}
+
+.form-control textarea {
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(221, 221, 221);
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.terms {
+  height: 25vh;
+  background-color: rgb(221, 221, 221);
+  padding: 20px;
+}
+
+.terms a {
+  color: black;
+}
+
+#checkOutBackground {
+  background-color: white;
+}
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  width: 100%;
+}
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.pageFooter {
+  margin-top: -5px;
+  height: 150px;
+  background-color: black;
+}
+
+.pageFooter h4 {
+  color: aliceblue;
+  padding-top: 20px;
+  margin-top: -10px;
+}
+
+.pageFooter h5 {
+  color: aliceblue;
+  padding-top: 5px;
+}
+
+#footerLine {
+  border-bottom: 2px solid aliceblue;
+  margin-left: 900px;
+  margin-right: 900px;
+  padding-top: 5px;
+}
+
+#footerNav {
+  padding-top: 5px;
+}
+
+#footerNav a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.pageFooter button:hover {
+  border: 3px solid aliceblue;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  color: white;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: aliceblue;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  height: 50px;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+  margin-top: 50px;
+  height: 100px;
+  background-color: black;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  height: 20px;
+  background-color: black;
+  color: white;
+}
+
+
+.fas fa- times{
+  color: black;
+}
+
+#no{
+  text-align: left;
+}
+
+.underline {
+  display: inline-block;
+  text-decoration: underline;
+  color: black;
+}
+
+.checkbox{
+  display:flex;
+  justify-content: left;
+}
+
+.footerlinks a{
+  text-decoration: none;
+  color: gray;
+}
+
+.footerlinks a:hover{
+  text-decoration: underline;
+  color: white;
+}
